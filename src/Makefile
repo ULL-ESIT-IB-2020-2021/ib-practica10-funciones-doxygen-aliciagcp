@@ -8,12 +8,12 @@ CXXFLAGS = -std=c++14 -g -Wall	 # The C++ compiler options (C++14, preserve debu
 LDFLAGS =						             # The linker options (if any)
 
 # The all target builds all of the programs handled by the makefile.
-all: cripto
+all: cripto examen
 
 cripto: funciones_cripto.o cripto.o
 	$(CXX) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
 
-cripto2: funciones_cripto2.o cripto2.o
+examen: funciones_.o practica_10_examen.o
 	$(CXX) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
 
 # Indicate that the all and clean targets do not
