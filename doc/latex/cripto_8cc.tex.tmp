@@ -1,0 +1,99 @@
+\hypertarget{cripto_8cc}{}\doxysubsection{cripto.\+cc File Reference}
+\label{cripto_8cc}\index{cripto.cc@{cripto.cc}}
+
+
+Encripta o desencripta un archivo dado con el método César o X\+OR, guardando la salida un archivo diferente.  
+
+
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include \char`\"{}funciones\+\_\+cripto.\+h\char`\"{}}\newline
+Include dependency graph for cripto.\+cc\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{cripto_8cc_a166c7c813d42d4aeabfe6f4818864170}{main}} (int argl, char $\ast$argz\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Función principal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Encripta o desencripta un archivo dado con el método César o X\+OR, guardando la salida un archivo diferente. 
+
+\begin{DoxyAuthor}{Author}
+Alicia G. Cruz Pérez 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+16 dec 2020 
+\end{DoxyDate}
+
+
+\doxysubsubsection{Function Documentation}
+\mbox{\Hypertarget{cripto_8cc_a166c7c813d42d4aeabfe6f4818864170}\label{cripto_8cc_a166c7c813d42d4aeabfe6f4818864170}} 
+\index{cripto.cc@{cripto.cc}!main@{main}}
+\index{main@{main}!cripto.cc@{cripto.cc}}
+\doxyparagraph{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argl,  }\item[{char $\ast$}]{argz\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Función principal. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em argl} & Número de parámetros de línea de comandos \\
+\hline
+\mbox{\texttt{ in}}  & {\em argz} & Vector (char$\ast$) que contiene los parámetros \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 21 of file cripto.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21                                  \{}
+\DoxyCodeLine{22   \mbox{\hyperlink{funciones__cripto_8cc_aeac332c082069f54e8769d311dd2049d}{Usage}}(argl, argz);}
+\DoxyCodeLine{23   \textcolor{keywordflow}{if} (!\mbox{\hyperlink{funciones__cripto_8cc_abc4abacde1d85af9efc72f4b33cada4e}{Parametrosvalidos}}(argz)) \{}
+\DoxyCodeLine{24     cout << \textcolor{stringliteral}{"Son invalidos algunos de los parametros que se introducen"}}
+\DoxyCodeLine{25               << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{26     exit(EXIT\_FAILURE);}
+\DoxyCodeLine{27   \}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29   ifstream input\_file(argz[1], ifstream::in);}
+\DoxyCodeLine{30   ofstream output\_file(argz[2], ofstream::out);}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32   stringstream buffer;}
+\DoxyCodeLine{33   buffer << input\_file.rdbuf();}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35   \textcolor{keywordtype}{string} texto\{buffer.str()\};}
+\DoxyCodeLine{36   \textcolor{keywordtype}{string} key\{argz[4]\};}
+\DoxyCodeLine{37   \textcolor{keywordtype}{string} output\{\textcolor{stringliteral}{""}\};}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39   \textcolor{keywordflow}{if} (argz[3][0] == \textcolor{charliteral}{'2'}) \{}
+\DoxyCodeLine{40     \textcolor{keywordtype}{int} cesar\_constante\{stoi(key)\};}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42     \textcolor{keywordflow}{if} (argz[5][0] == \textcolor{charliteral}{'+'}) \{}
+\DoxyCodeLine{43       output = \mbox{\hyperlink{funciones__cripto_8cc_ac7f709cfa214a97ba43afa2f2bffaec5}{Cesar}}(texto, cesar\_constante);}
+\DoxyCodeLine{44     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (argz[5][0] == \textcolor{charliteral}{'-\/'}) \{}
+\DoxyCodeLine{45       output = \mbox{\hyperlink{funciones__cripto_8cc_ac7f709cfa214a97ba43afa2f2bffaec5}{Cesar}}(texto, -\/cesar\_constante);}
+\DoxyCodeLine{46     \}}
+\DoxyCodeLine{47   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (argz[3][0] == \textcolor{charliteral}{'1'}) \{}
+\DoxyCodeLine{48     output = \mbox{\hyperlink{funciones__cripto_8cc_acbc798dcc358a579f28c61a7df231e57}{XOR}}(texto, key);}
+\DoxyCodeLine{49   \}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51   output\_file << output;}
+\DoxyCodeLine{52   output\_file.close();}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{55 \}}
+
+\end{DoxyCode}
+
+
+References Cesar(), Parametrosvalidos(), Usage(), and X\+O\+R().
+
+Here is the call graph for this function\+:
+% FIG 1

@@ -1,0 +1,19 @@
+digraph "main"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Función principal."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Cesar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funciones__cripto_8cc.html#ac7f709cfa214a97ba43afa2f2bffaec5",tooltip="Efectúa el cifrado/descifrado césar."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Parametrosvalidos",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funciones__cripto_8cc.html#abc4abacde1d85af9efc72f4b33cada4e",tooltip="Comprueba que los parámetros introducidos en el programa son válidos."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Entero",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funciones__cripto_8cc.html#acd345342f0a7c983075c754028b21ff9",tooltip="Comprueba si la string que se introduce es un entero."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Usage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funciones__cripto_8cc.html#aeac332c082069f54e8769d311dd2049d",tooltip="Muestra el modo de uso correcto del programa En caso de que el uso no sea el correcto,..."];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="XOR",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funciones__cripto_8cc.html#acbc798dcc358a579f28c61a7df231e57",tooltip="Efectúa el cifrado/descifrado XOR."];
+}
