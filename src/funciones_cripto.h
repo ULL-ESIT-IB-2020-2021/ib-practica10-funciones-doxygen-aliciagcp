@@ -23,4 +23,5 @@ bool Entero(const string str);
 bool Parametrosvalidos(char *argv[]);
 string Cesar(string message, int key);
 string XOR(string message, string key);
-
+void ContarA(string texto);
+ 

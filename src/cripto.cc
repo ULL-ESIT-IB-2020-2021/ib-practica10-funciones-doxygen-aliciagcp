@@ -51,5 +51,8 @@ int main(int argl, char* argz[]) {
   output_file << output;
   output_file.close();
 
+  ContarA(texto);  
+
   return 0;
 }
+

@@ -114,3 +114,12 @@ string XOR(string texto, string key) {
 
   return encrypted_texto;
 }
+
+void ContarA(string texto){
+  int contador {0};
+  for (auto c: texto){
+    if (c == 'a') contador++;
+  }
+  cout << "Número de a: " << contador << endl;
+}
+

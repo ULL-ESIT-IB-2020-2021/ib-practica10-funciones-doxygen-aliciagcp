@@ -13,8 +13,6 @@ all: cripto examen
 cripto: funciones_cripto.o cripto.o
 	$(CXX) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
 
-examen: funciones_.o practica_10_examen.o
-	$(CXX) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
 
 # Indicate that the all and clean targets do not
 # correspond to actual files.
@@ -24,7 +22,6 @@ examen: funciones_.o practica_10_examen.o
 # therefore need not be explicitly specified:
 # hello_world.o: hello_world.cc
 #
-	$(CXX) $(CXXFLAGS) -c $<
 
 # The clean target removes all of the executable files
 # and object files produced by the build process
